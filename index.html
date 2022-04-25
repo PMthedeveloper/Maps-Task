@@ -1,0 +1,63 @@
+<html>
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.css"
+    />
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      href="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.css"
+      rel="stylesheet"
+    />
+<link rel="stylesheet" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.css" type="text/css">
+  </head>
+  <body style="border: 0; margin: 0; background-color: cadetblue">
+    <div id="map"></div>
+    <div id="formBlock">
+      <form id="form">
+        <label>Choose starting point</label>
+      <div id="geocoder" 
+      type="text"
+      name="start"
+      class="start"
+      placeholder="Choose starting point"
+      >
+      </div>
+        <pre id="result" style="display: none;"></pre>
+      <br/>
+      <label>Choose destination</label>
+      <div id="geocoder1" 
+      type="text"
+      name="end"
+      class="destination"
+      placeholder="Choose starting point">
+      </div>
+        <button class="button" type="submit" onsubmit="hello()">
+          Get Directions
+        </button>
+      </form>
+    </div>
+    <div id="distance"></div>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet/0.7.7/leaflet.js"></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-map.js?key=vg2171oHe9VUwKKo3c4E8mnlS3KREf0E
+        "></script>
+    <script src="https://www.mapquestapi.com/sdk/leaflet/v2.2/mq-routing.js?key=vg2171oHe9VUwKKo3c4E8mnlS3KREf0E
+        "></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v5.0.0/mapbox-gl-geocoder.min.js"></script>
+
+    <script src="app.js"></script>
+    <script>
+      
+
+      // Clear results container when search is cleared.
+      // geocoder.on("clear", () => {
+      //   results.innerText = "";
+      // });
+      // geocoder1.on("clear", () => {
+      //   results.innerText = "";
+      // });
+    </script>
+  </body>
+</html>
